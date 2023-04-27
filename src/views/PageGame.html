@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo lampada</title>
+    <link rel="stylesheet" href="../stetic/style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <div id="Perfil" class="hover">
+            level<br>
+            <div id="level">0</div>Perfil
+        </div>
+        <div id="Rank" class="hover"><span>Rank</span>
+            <div class="options mostrarRank">leigo</div>
+            <div class="select">
+                <div class="options selected" value="leigo">leigo</div>
+                <div class="options" value="iniciante">iniciante</div>
+                <div class="options" value="experiente">experiente</div>
+                <div class="options" value="proficional">proficional</div>
+            </div>
+        </div>
+
+        <div id="suporte" class="hover">Ajuda</div>
+        <div id="suporte" class="hover">Suporte</div>
+    </div>
+    <section id="area_jogo">
+        <div class="montagens-lampada">
+            <div class="inputComeco">
+                <fieldset>
+                    <legend>Coloque seu nome:</legend>
+                    <input type="text" placeholder="nome..." class="nome" value=""><br>
+                </fieldset>
+            </div>
+            <div class="button-passar-nivel"><button onclick="functionPassaNivel()">Proximo</button></div>
+            <div class="jogoCompleto">
+                <h1>Parabéns você completou o jogo</h1>
+                <button class="TentarNovamente" onclick="tentarNovamente()">Tentar novamente</button>
+            </div>
+            <div class="partes-lampadas">
+                <div id="lampada-completa">
+                    <div class="soltar" data-name="a"></div>
+                    <div class="soltar" data-name="b"></div>
+                    <div class="soltar" data-name="c"></div>
+                    <div class="soltar" data-name="d"></div>
+                </div>
+                <div id="lampada-desmontada">
+                    <div class="container-pegar">
+                        <div class="pegar" draggable="true"><img src="../../public/image/image1.jpeg" data-number="1"
+                                alt="1"></div>
+                    </div>
+                    <div class="container-pegar">
+                        <div class="pegar" draggable="true"><img src="../../public/image/image2.jpeg" data-number="2"
+                                alt="2"></div>
+                    </div>
+                    <div class="container-pegar">
+                        <div class="pegar" draggable="true"><img src="../../public/image/image3.jpeg" data-number="3"
+                                alt="3"></div>
+                    </div>
+                    <div class="container-pegar">
+                        <div class="pegar" draggable="true"><img src="../../public/image/image4.jpeg" data-number="4"
+                                alt="4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="botaes-jogo">
+                <button class="forma-botaes hover" style="background-color: #dde3ca;"
+                    onclick="upDateAreas()">Ligar</button>
+                <button class="forma-botaes hover" id="buttonRest" style="background-color: #b2d9f7;">Reiniciar</button>
+            </div>
+        </div>
+    </section>
+    <div id="chat">
+        <div class="area-messagens"></div>
+        <input type="text" id="chatinput" placeholder="Mensagem">
+    </div>
+    <script src="../javascript/script.js"></script>
+    <script src="../api/api.js"></script>
+</body>
+
+</html>
